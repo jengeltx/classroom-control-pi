@@ -28,6 +28,9 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
+  
+  notify { "Hello world! I am ${::fqdn}": } 
+  
 }  
  node kej01s.puppetlabs.vm  {
   # This is where you can declare classes for all nodes.
@@ -37,8 +40,8 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "Hello world! I am ${::fqdn}": } 
+  
     
   notify { "This will only be enforced on the Linux node.": }
-  
+  notify { "Hello world! I am ${::fqdn}": } 
 }
