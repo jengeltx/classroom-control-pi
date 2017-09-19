@@ -1,5 +1,6 @@
 # Installs the acme/ohmyzsh module from the Puppet Forge
 mod 'acme/ohmyzsh', '0.1.2'
+mod 'abuxton-puppet_audit', '0.0.2'
 
 # Installs the puppetlabs/vcsrepo module from its GitHub repository
 mod 'vcsrepo',
