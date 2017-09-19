@@ -30,4 +30,7 @@ node default {
   include examples::puppetize
   
   notify { "Hello world! I am ${::fqdn}": }
+  
+  notify { "This will only be enforced on the Linux node." }
+  
 }
