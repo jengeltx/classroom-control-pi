@@ -6,4 +6,4 @@ mod 'vcsrepo',
   :git => 'https://github.com/puppetlabs/puppetlabs-vcsrepo'
 
 # Install NTP module
-mod 'puppetlabs-ntp'
+mod 'puppetlabs-ntp', '6.2.0'
