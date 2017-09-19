@@ -38,19 +38,14 @@
   }
   node irustan.puppetlabs.vm {
   include examples::puppetize
-  include ::ntp
-  
-  class { '::ntp':
-    servers   => ['time.google.com'],
-    restrict  => [
-      'default ignore',
-      '-6 default ignore',
-      '127.0.0.1',
-      '-6 ::1',
-      'ntp1.corp.com nomodify notrap nopeer noquery',
-      'ntp2.corp.com nomodify notrap nopeer noquery'
-    ],
+ 
+ # Testing mysql module deploy
+  include '::mysql::server'
+  class { '::mysql::server':
+  root_password           => 'justsomepassword',
+  remove_default_accounts => true,
+  override_options        => $override_options
   }
-  
+ 
   notify { "This is the Linux VM running ${::osfamily}": }
   }
