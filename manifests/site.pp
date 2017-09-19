@@ -25,10 +25,15 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+  notify { "Hello world! I am ${::fqdn}": }
+  
+node aglindsay03.puppetlabs.vm {
+  # comment this out when does with the excersise
+  notify { "This will only be enforced on the Linux Node.": }
   
   # example code for the classroom
   include examples::puppetize
   
   notify { "This is the default message from the production environment": }
-  notify { "Hello world! I am ${::fqdn}": }
+  
 }
