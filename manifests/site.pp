@@ -35,4 +35,8 @@
   node default {
   include examples::puppetize
   notify { "This is ${::hostname} running ${::osfamily}": }
-}
+  }
+  node irustan.puppetlabs.vm {
+  include examples::puppetize
+  notify { "This is the Linux VM running ${::osfamily}": }
+  }
