@@ -28,6 +28,6 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
-  
-  notify { "This is the default message from the production environment": }
+  notify { "Hey there! I am ${::hostname}": }
+#  notify { "This is the default message from the production environment": }
 }
