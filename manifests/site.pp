@@ -1,3 +1,4 @@
+
 ## site.pp ##
 
 # This file (/etc/puppetlabs/puppet/manifests/site.pp) is the main entry point
@@ -30,4 +31,5 @@ node default {
   include examples::puppetize
   
   notify { "This is the default message from the production environment": }
+  notify { "Hello world! I am ${::fqdn}": }
 }
