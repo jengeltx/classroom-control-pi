@@ -23,7 +23,7 @@
 
 #node aglindsay03.puppetlabs.vm {
   # comment this out when does with the excersise
-  #notify { "This will only be enforced on the Linux Node": }
+  notify { "This will only be enforced on the Linux Node": }
   }
   
 node default {
