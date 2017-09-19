@@ -5,5 +5,5 @@ mod 'acme/ohmyzsh', '0.1.2'
 mod 'vcsrepo',
   :git => 'https://github.com/puppetlabs/puppetlabs-vcsrepo'
 
-# Install NTP module
-mod 'puppetlabs-ntp', '6.2.0'
+# Install mysql module
+mod 'puppetlabs-mysql', '4.0.1'
