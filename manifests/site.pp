@@ -21,13 +21,18 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node default {
-  # This is where you can declare classes for all nodes.
-  # Example:
+if {[::osfamily]=RedHat,
+  node linux {
   #   class { 'my_class': }
-  
-  # example code for the classroom
   include examples::puppetize
-  notify { "Hey there! I am ${::hostname} running ${::osfamily}": }
-#  notify { "This is the default message from the production environment": }
+  notify { "An awesome Unix server called ${::hostname} and running ${::osfamily}": }
+  }elseif{
+  [::osfamily]=windows,
+  node windows {
+  include examples::puppetize
+  notify { "An sorry windows server called ${::hostname} and running ${::osfamily}": }
+  }else{
+  node default {
+  include examples::puppetize
+  notify { "This is ${::hostname} running ${::osfamily}": }
 }
