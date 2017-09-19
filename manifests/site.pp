@@ -28,9 +28,17 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
+}  
+ node kej01s.puppetlabs.vm  {
+  # This is where you can declare classes for all nodes.
+  # Example:
+  #   class { 'my_class': }
   
-  notify { "Hello world! I am ${::fqdn}": }
+  # example code for the classroom
+  include examples::puppetize
   
-  notify { "This will only be enforced on the Linux node." }
+  notify { "Hello world! I am ${::fqdn}": } 
+    
+  notify { "This will only be enforced on the Linux node.": }
   
 }
