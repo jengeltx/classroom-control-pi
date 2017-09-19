@@ -41,11 +41,11 @@
  
  # Testing mysql module deploy
   include '::mysql::server'
-  class { '::mysql::server':
-  root_password           => 'justsomepassword',
-  remove_default_accounts => true,
-  override_options        => $override_options
-  }
+#  class { '::mysql::server':
+#  root_password           => 'justsomepassword',
+#  remove_default_accounts => true,
+#  override_options        => $override_options
+#  }
  
   notify { "This is the Linux VM running ${::osfamily}": }
   }
