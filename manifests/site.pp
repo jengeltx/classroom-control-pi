@@ -28,6 +28,6 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
-  notify { "Hey there! I am ${::hostname}": }
+  notify { "Hey there! I am ${::hostname} running ${::osfamily}": }
 #  notify { "This is the default message from the production environment": }
 }
