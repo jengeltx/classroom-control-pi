@@ -21,13 +21,13 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-if {[osfamily]=RedHat,
+if {[osfamily]=RedHat;
   node linux {
   #   class { 'my_class': }
   include examples::puppetize
   notify { "An awesome Unix server called ${::hostname} and running ${::osfamily}": }
   }elseif{
-  [osfamily]=windows,
+  [osfamily]=windows;
   node windows {
   include examples::puppetize
   notify { "An sorry windows server called ${::hostname} and running ${::osfamily}": }
