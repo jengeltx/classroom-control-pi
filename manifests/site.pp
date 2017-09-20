@@ -27,7 +27,7 @@ node abuxton.puppetlabs.vm {
   
   # example code for the classroom
   include examples::puppetize
-  
+  include profile::redis
   notify { "This is the default message from the ${environment} environment": }
 }
 node default {
