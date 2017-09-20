@@ -34,13 +34,12 @@
 #  ]else[
   node default {
   include examples::puppetize
-  include profile::redis
-  
-  notify { "This is ${::hostname} running ${::osfamily}": }
+    notify { "This is ${::hostname} running ${::osfamily}": }
   }
   node irustan.puppetlabs.vm {
   include examples::puppetize
- 
+  include profile::redis
+
  # Testing mysql module deploy
   include '::mysql::server'
 #  class { '::mysql::server':
