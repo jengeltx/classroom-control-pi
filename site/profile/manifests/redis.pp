@@ -5,7 +5,9 @@ class profile::redis {
   
   class { 'redis':
     # what parameter should we pass to set maxmemory to 10mb?
-    
+    class { '::redis':
+    maxmemory => '10mb',
+    }
   }
   contain redis
 }
