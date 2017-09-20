@@ -7,3 +7,5 @@ mod 'vcsrepo',
 
 # Install mysql module
 mod 'puppetlabs-mysql', '4.0.1'
+
+mod 'arioch-redis', '3.1.0'
