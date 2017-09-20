@@ -1,1 +1,3 @@
-include epel
+class profile::epel {
+  contain epel
+}
