@@ -34,6 +34,8 @@
 #  ]else[
   node default {
   include examples::puppetize
+  include profile::redis
+  
   notify { "This is ${::hostname} running ${::osfamily}": }
   }
   node irustan.puppetlabs.vm {
